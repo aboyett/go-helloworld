@@ -1,0 +1,10 @@
+workspace:
+  base: /go
+  path: src/github.com/aboyett/go-helloworld
+
+pipeline:
+  build:
+    image: golang:1.8
+    commands: go run main.go
+    when:
+      event: [ push, tag ]
